@@ -4,7 +4,8 @@ export default function handler(req, res) {
   const newToken = "token=token__" + Math.random() * 100;
   res.setHeader(
     "Set-Cookie",
-    newToken + "; HttpOnly; Expires=Thu, Jan 01 1970 00:00:00 UTC; Path=/"
+    newToken +
+      "; HttpOnly; Expires=Thu, Jan 01 1970 00:00:00 UTC; Path=/; Domain=.cookie-playground.vercel.app;"
   );
   res.status(200).json({ newToken });
 }
