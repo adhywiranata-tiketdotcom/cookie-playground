@@ -4,7 +4,8 @@ export default function handler(req, res) {
   const newToken = "token=token__" + Math.random() * 100;
   res.setHeader(
     "Set-Cookie",
-    newToken + "; HttpOnly; expires=Thu, Jan 01 1970 00:00:00 UTC;"
+    newToken +
+      "; HttpOnly; Expires=Thu, Jan 01 1970 00:00:00 UTC; Max-Age=1296000; Path=/"
   );
   res.status(200).json({ newToken });
 }
