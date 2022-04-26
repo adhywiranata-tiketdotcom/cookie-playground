@@ -4,6 +4,7 @@ export default function handler(req, res) {
   const newToken = "token=token__" + Math.random() * 100;
   const newToken2 = "token=token__" + Math.random() * 100;
   res.setHeader("X-Wow", "yeet");
+  res.setHeader("X-Wow", "nice");
   res.setHeader(
     "Set-Cookie",
     newToken +
